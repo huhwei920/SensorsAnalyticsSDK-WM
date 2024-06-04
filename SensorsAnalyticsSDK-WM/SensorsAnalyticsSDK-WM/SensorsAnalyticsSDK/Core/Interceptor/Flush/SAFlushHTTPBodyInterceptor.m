@@ -48,7 +48,7 @@
     NSString *bodyString = [NSString stringWithFormat:@"crc=%d&gzip=%d&data_list=%@", hashCode, [gzip intValue], data];
     NSString *projectName = [SAFlowManager sharedInstance].configOptions.projectName;
     if (projectName.length>0) {
-        bodyString = [bodyString stringByAppendingFormat:@"object=%@", projectName];
+        bodyString = [bodyString stringByAppendingFormat:@"&object=%@", projectName];
     }
     if (input.isInstantEvent) {
         bodyString = [bodyString stringByAppendingString:@"&instant_event=true"];
