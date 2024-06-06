@@ -45,7 +45,7 @@
     NSString *data = bodyDic[kSAFlushBodyKeyData];
     int hashCode = [data sensorsdata_hashCode];
     data = [data stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet alphanumericCharacterSet]];
-    NSString *bodyString = [NSString stringWithFormat:@"crc=%d&gzip=%d&data_list=%@", hashCode, [gzip intValue], data];
+    NSString *bodyString = [NSString stringWithFormat:@"crc=%d&gzip=%d&data=%@", hashCode, [gzip intValue], data];
     NSString *projectName = [SAFlowManager sharedInstance].configOptions.projectName;
     if (projectName.length>0) {
         bodyString = [bodyString stringByAppendingFormat:@"&project=%@", projectName];
