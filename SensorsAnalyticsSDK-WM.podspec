@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.license      = "MIT"
   spec.author       = { "huhangwei" => "huhangwei@gmail.com" }
   spec.platform     = :ios, "12.0"
-  spec.source       = { :git => "https://github.com/huhwei920/SensorsAnalyticsSDK-WM", :tag => "spec.version" }
+  spec.source       = { :git => "https://github.com/huhwei920/SensorsAnalyticsSDK-WM.git", :tag => "spec.version" }
   spec.source_files  = "SensorsAnalyticsSDK-WM/SensorsAnalyticsSDK/**/*.{h,m}"
   spec.requires_arc = true
 
