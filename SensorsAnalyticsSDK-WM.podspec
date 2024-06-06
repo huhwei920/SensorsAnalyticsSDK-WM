@@ -9,9 +9,11 @@ Pod::Spec.new do |spec|
   spec.author       = { "huhangwei" => "huhangwei@gmail.com" }
   spec.platform     = :ios, "12.0"
   spec.source       = { :git => "https://github.com/huhwei920/SensorsAnalyticsSDK-WM.git", :tag => spec.version }
-  spec.source_files = "SensorsAnalyticsSDK-WM/SensorsAnalyticsSDK"
-  # spec.source_files = "SensorsAnalyticsSDK-WM/SensorsAnalyticsSDK/**/*.{h,m}"
-  # spec.resources    = "SensorsAnalyticsSDK-WM/SensorsAnalyticsSDK/Resources/*.xcprivacy"
+  spec.source_files = "SensorsAnalyticsSDK-WM/SensorsAnalyticsSDK/**/*.{h,m}"
   spec.requires_arc = true
+
+  spec.subspec 'Resources' do |ss|
+    ss.source_files = 'SensorsAnalyticsSDK-WM/SensorsAnalyticsSDK/Resources/*.xcprivacy'
+  end
 
 end
